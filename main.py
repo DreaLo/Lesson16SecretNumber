@@ -30,7 +30,7 @@ def result():
     if guess == secret_number:
         message = "Correct! The secret number is {0} !".format(str(secret_number))
         response = make_response(render_template("result-win.html", message=message))
-        response.set_cookie("secret_number", str(random.randint(1, 30)))  # set the new secret number
+        response.set_cookie("secret_number", str(random.randint(1, 20)))  # set the new secret number
         return response
     elif guess > secret_number:
         message = "Your guess is not correct... Let's try something smaller."
